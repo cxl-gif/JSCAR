@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSCARS - Our Fleet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+
+        .fleet-container {
+            display: grid;
+            grid-template-columns: 250px 4fr;
+            gap: 40px;
+            margin: 60px auto;
+        }
+
+        .filters {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            height: fit-content;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filter-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        .btn-filter {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar container dark-text">
+        <div class="navbar-brand">JSCARS</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html" class="nav-links">Sign In</a>
+            <a href="signup.html" class="btn btn-outline">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="section-title">Our Fleet</h1>
+            <p class="section-subtitle">Choose from our wide selection of premium vehicles</p>
+        </div>
+    </div>
+
+    <section class="container fleet-container">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group" style="margin-top: 20px;">
+                <label>Search</label>
+                <input type="text" placeholder="Looking for...">
+            </div>
+            <div class="filter-group">
+                <label>Brand</label>
+                <select id="filter-brand">
+                    <option value="all">All Brands</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Porsche">Porsche</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Sports Sedan">Sports Sedan</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Sports Car">Sports Car</option>
+                    <option value="SUV">SUV</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Price Range</label>
+                <input type="range" id="filter-price" style="width:100%" min="50" max="500" value="500">
+                <div
+                    style="display:flex; justify-content:space-between; font-size: 0.8rem; color: #666; margin-top:5px;">
+                    <span>$50</span>
+                    <span id="price-display">$500</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-filter" id="apply-filters">Apply Filters</button>
+            <button class="btn btn-outline btn-filter" id="reset-filters"
+                style="margin-top: 10px; border-color: #ddd;">Reset</button>
+        </aside>
+
+        <div class="car-grid" style="margin-bottom: 0;">
+            <div class="car-card">
+                <img src="img\mr-dibo-32DO2xptbp8-unsplash.jpg" alt="Mercedes" class="car-img">
+                <div class="car-info">
+                    <h3 class="car-name">Mercedes-Benz C-Class</h3>
+                    <p class="car-type">Mercedes</p>
+                    <div class="car-specs">
+                        <div class="car-spec-item">⚙️ automatic</div>
+                        <div class="car-spec-item">👥 5 seats</div>
+                        <div class="car-spec-item">⛽ petrol</div>
+                    </div><br>
+                    <div class="car-footer">
+                        <div class="car-price">$120<span>/day</span></div>
+                        <a href="details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="img\mate-vanyek-amyO34qYZj4-unsplash.jpg" alt="BMW" class="car-img">
+                <div class="car-info">
+                    <h3 class="car-name">BMW X5</h3>
+                    <p class="car-type">BMW</p>
+                    <div class="car-specs">
+                        <div class="car-spec-item">⚙️ automatic</div>
+                        <div class="car-spec-item">👥 5 seats</div>
+                        <div class="car-spec-item">⛽ diesel</div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-price">$180<span>/day</span></div>
+                        <a href="details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="car-card">
+                <img src="img\daniel-shapiro-JAQLPuJYAs8-unsplash.jpg" alt="Tesla" class="car-img">
+                <div class="car-info">
+                    <h3 class="car-name">Tesla Model S</h3>
+                    <p class="car-type">Tesla</p>
+                    <div class="car-specs">
+                        <div class="car-spec-item">⚙️ automatic</div>
+                        <div class="car-spec-item">👥 5 seats</div>
+                        <div class="car-spec-item">⛽ electric </div>
+                    </div>
+                    <div class="car-footer">
+                        <div class="car-price">$150<span>/day</span></div>
+                        <a href="details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>JSCARS</h4>
+                <p class="footer-text">Your trusted partner for premium car rentals. Experience the freedom of
+                    driving
+                    the car of your choice.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fleet.html">Our Fleet</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Email : JSCARS@gmail.com</a></li>
+                    <li><a href="#">Phone : +212 644134571</a></li>
+                    <li><a href="#">Address: 123 Car Street, Auto City</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JSCARS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
