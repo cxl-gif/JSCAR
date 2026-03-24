@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --color: rgba(0, 0, 0, 0.25);
+
+        }
+
+        .content-book {
+            margin: 40px 20px;
+        }
+
+        .content-book .book-head {
+            display: flex;
+            gap: 55px;
+        }
+
+        .book-head img {
+            width: 600px;
+            height: 500px;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+
+        }
+
+
+        .book-head .book-caractere {
+            width: 600px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+
+        }
+
+        .book-caractere h2 {
+            text-transform: capitalize;
+            margin-top: 20px;
+            font-size: 40px;
+
+        }
+
+        .book-caractere .name-car {
+            margin-top: -32px;
+            padding-left: 10px;
+            opacity: 40%;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+
+        }
+
+        .book-caractere .book-prix-day {
+            font-size: 30px;
+
+        }
+
+        .book-caractere p .book-prix {
+            font-weight: 800;
+            font-size: xx-large;
+        }
+
+        .book-caractere .caractere {
+            padding: 30px;
+            background-color: var(--color);
+            display: grid;
+            grid: 100px;
+            border-radius: 16px;
+            grid-template-columns: repeat(2, 300px);
+            row-gap: 20px;
+
+
+        }
+
+        .book-caractere .description-feet {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .book-caractere .description-feet p {
+            opacity: 50%;
+        }
+
+        .feet-book {
+            display: flex;
+            gap: 200px;
+
+        }
+
+        .feet-book .side-image {
+            margin-top: 15px;
+            display: flex;
+            gap: 22px;
+        }
+
+        .feet-book .side-image img {
+            width: 160px;
+            height: 120px;
+            border-radius: 16px;
+
+        }
+
+        .car-book {
+            background-color: var(--color);
+            padding: 40px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 65px;
+            margin-left: 60px;
+
+        }
+
+        .car-book .book-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-left: 8px;
+        }
+
+        .car-book .book-inputs .start,
+        .car-book .book-inputs .end {
+            display: flex;
+            flex-direction: rom;
+
+            gap: 50px;
+        }
+
+        .car-book .book-inputs .start div,
+        .car-book .book-inputs .end div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .car-book .book-inputs input {
+            margin-top: 10px;
+            margin-left: 7px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            width: 250px;
+            height: 45px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .car-book h3 {
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            font-size: 40px;
+
+        }
+
+        button {
+            text-transform: capitalize;
+            font-weight: 600;
+            background-color: rgba(0, 0, 0, 0.624);
+            color: white;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            width: 50%;
+            margin: 50px auto 20px;
+            height: 50px;
+            border: none;
+            outline: none;
+            border-radius: 7px;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.86);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar container">
+        <div class="navbar-brand">JSCARS</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/fleet.html">Fleet</a></li>
+                <li><a href="/viewcar/index.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="/login/index.html" class="nav-links">Sign In</a>
+            <a href="/signup/index.html" class="btn btn-outline">Sign Up</a>
+        </div>
+    </header>
+    <div class="content-book">
+        <div class="book-head">
+            <div class="img-look">
+                <img src="/img/teslamodels.jpg" alt="">
+            </div>
+
+            <div class="book-caractere">
+                <h2>tesla model s</h2>
+                <p class="name-car">tesla model s 2024</p>
+                <p class="book-prix-day"><b class="book-prix">$150/</b>day</p>
+                <div class="caractere">
+
+                    <p class="">⚙️ Transmission <b>Automatic</b></p>
+                    <p class=""> ⛽️ FUEL <b>electric</b> </p>
+
+                    <p class="">👥️ SEAT <b>5</b> </p>
+                    <p>🚗️ Category <b>luxury</b> </p>
+
+
+                </div>
+                <div class="description-feet">
+                    <h4>description</h4>
+                    <p>Experience the future of driving with the Tesla Model S. This all-electric luxury sedan offers
+                        incredible performance, advanced autopilot features, and a sleek, modern design.</p>
+                </div>
+            </div>
+        </div>
+        <div class="feet-book">
+            <div class="side-image">
+                <img src="/img/thelook2.jpg" alt="">
+                <img src="/img/thelook.jpg" alt="">
+            </div>
+            <div class="car-book">
+                <h3>book this car</h3>
+                <div class="book-inputs">
+                    <div class="start">
+                        <div>
+                            <label for="start">Start Date</label>
+                            <input type="date" name="" id="start">
+                        </div>
+                        <div>
+                            <label for="pickup">Pickup Location</label>
+                            <input type="text" name="" id="pickup" placeholder="Enter pickup location">
+                        </div>
+                    </div>
+                    <div class="end">
+                        <div>
+                            <label for="end">End Date</label>
+                            <input type="date" name="" id="end" placeholder="">
+                        </div>
+                        <div>
+                            <label for="drop">Drop-off Location</label>
+                            <input type="text" name="" id="drop" placeholder="drop-off location">
+                        </div>
+                    </div>
+
+                </div>
+                <button id="bookbtn">book now</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class=" footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>JSCARS</h4>
+                <p class="footer-text">Your trusted partner for premium car rentals. Experience the
+                    freedom of driving
+                    the car of your choice.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fleet.html">Our Fleet</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Email : JSCARS@gmail.com</a></li>
+                    <li><a href="#">Phone : +212 644134571</a></li>
+                    <li><a href="#">Address: 123 Car Street, Auto City</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JSCARS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js">
+        
+    </script>
+</body>
+
+</html>

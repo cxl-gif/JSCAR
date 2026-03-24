@@ -360,6 +360,8 @@ input[type="text"],
 
 /* Footer */
 .footer {
+    /* display: flex;
+    flex-shrink: 2; */
     background: #f8f9fa;
     padding: 60px 0 30px;
     border-top: 1px solid #e5e7eb;

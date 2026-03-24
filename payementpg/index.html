@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --color: rgba(0, 0, 0, 0.25);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* CONTAINER */
+        .payment-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: var(--color);
+            border-radius: 16px;
+        }
+
+        /* TITLE */
+        .payment-container h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* FORM */
+        .payment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .row div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            margin-top: 8px;
+            height: 45px;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+        }
+
+        /* SUMMARY */
+        .summary {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .summary p {
+            font-size: 18px;
+        }
+
+        /* BUTTON */
+        button {
+            width: 50%;
+            margin: 30px auto;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar container">
+        <div class="navbar-brand">JSCARS</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/fleet.html">Fleet</a></li>
+                <li><a href="/viewcar/index.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="/login/index.html" class="nav-links">Sign In</a>
+            <a href="/signup/index.html" class="btn btn-outline">Sign Up</a>
+        </div>
+    </header>
+
+    <div class="payment-container">
+        <h2>Payment</h2>
+
+        <form class="payment-form">
+
+            <div class="row">
+                <div>
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="example@gmail.com">
+                </div>
+            </div>
+
+            <div>
+                <label>Card Number</label>
+                <input type="text" placeholder="1234 5678 9012 3456">
+            </div>
+
+            <div class="row">
+                <div>
+                    <label>Expiry Date</label>
+                    <input type="month">
+                </div>
+                <div>
+                    <label>CVV</label>
+                    <input type="text" placeholder="123">
+                </div>
+            </div>
+
+            <!-- 🔥 SUMMARY -->
+            <div class="summary">
+                <p>Days: <span id="days">0</span></p>
+                <p>Total: $<span id="total">0</span></p>
+            </div>
+
+            <button type="button" id="payBtn">Pay Now</button>
+
+        </form>
+
+    </div>
+    <footer class=" footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>JSCARS</h4>
+                <p class="footer-text">Your trusted partner for premium car rentals. Experience the
+                    freedom of driving
+                    the car of your choice.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="fleet.html">Our Fleet</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Email : JSCARS@gmail.com</a></li>
+                    <li><a href="#">Phone : +212 644134571</a></li>
+                    <li><a href="#">Address: 123 Car Street, Auto City</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JSCARS. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="/viewcar/main.js">
+        const days = localStorage.getItem("days");
+        const total = localStorage.getItem("total");
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("total").textContent = total;
+    </script>
+</body>
+
+</html>
+
