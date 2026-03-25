@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <style>
         :root {
@@ -138,7 +138,6 @@
                 </div>
             </div>
 
-            <!-- 🔥 SUMMARY -->
             <div class="summary">
                 <p>Days: <span id="days">0</span></p>
                 <p>Total: $<span id="total">0</span></p>
@@ -191,14 +190,14 @@
 
 
 
-    <script src="/viewcar/main.js">
+    <script >
         const days = localStorage.getItem("days");
         const total = localStorage.getItem("total");
 
-        document.getElementById("days").textContent = days;
-        document.getElementById("total").textContent = total;
+        document.getElementById("days").textContent = " " + days;
+        document.getElementById("total").textContent = " " + total;
+
     </script>
 </body>
 
 </html>
-
