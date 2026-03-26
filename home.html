@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSCARS</title>
+    <!-- <link rel="icon" type="image/png" href="/img/logoout.png"> -->
     <link rel="stylesheet" href="css/style.css">
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Jomolhari:regular);
+
         .hero {
             position: relative;
             height: 100px;
@@ -20,15 +23,42 @@
             justify-content: center;
             align-items: center;
             color: #ffffff;
-            margin-top: 150px;
             text-align: center;
         }
 
-        @media(max-width:500px){
-           
+
+
+
+        .hero-propriete {
+            display: flex;
+            column-gap: 50px;
         }
 
-        
+        .hero-propriete div {
+            margin-top: 80px;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div .num {
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 40px;
+            color: #464444;
+            font-family: 'Jomolhari', serif;
+        }
+
+
+        div .propriete {
+            font-weight: 600;
+            font-size: 20px;
+            opacity: 70%;
+            font-family: 'Jomolhari', serif;
+
+        }
+
+
         .hero::before {
             content: '';
             position: absolute;
@@ -42,18 +72,19 @@
 
 <body>
     <header class="navbar container">
-        <div class="navbar-brand">JSCARS</div>
+        <div id="navbarbrand" class="navbar-brand"><a href="home.html"><img src="/img/logooo.png" alt="brand"> </a></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="fleet.html">Fleet</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a class="nav-contact" href="#">Contact Us</a></li>
             </ul>
         </nav>
         <div class="nav-actions">
             <a href="login/index.html" class="nav-links">Sign In</a>
             <a href="signup/index.html" class="btn btn-outline">Sign Up</a>
         </div>
+
     </header>
 
     <section class="hero">
@@ -74,6 +105,20 @@
                     </select>
                 </div>
                 <button class="btn btn-search">Search</button>
+            </div>
+            <div class="hero-propriete">
+                <div>
+                    <span class="num">500+</span>
+                    <span class="propriete">Cars</span>
+                </div>
+                <div>
+                    <span class="num">1000+</span>
+                    <span class="propriete">Customers</span>
+                </div>
+                <div>
+                    <span class="num">50+</span>
+                    <span class="propriete">Location</span>
+                </div>
             </div>
         </div>
     </section>

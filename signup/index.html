@@ -40,7 +40,7 @@
             justify-content: center;
             gap: 20px;
             max-width: 450px;
-            height: 100%;
+            height: auto;
             padding: 40px;
             margin: 20px auto;
             min-width: 200px;
@@ -49,7 +49,7 @@
             box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .header {
+        .header- {
             position: relative;
             z-index: 1;
             display: flex;
@@ -59,19 +59,19 @@
 
         }
 
-        .header h2 {
+        .header- h2 {
             font-size: 40px;
         }
 
-        .header p {
-
+        .header- p {
             opacity: 50%;
             font-size: 14px;
             margin-top: 10px;
 
         }
 
-        #password ,#copassword{
+        #password,
+        #copassword {
             padding-right: 38px;
         }
 
@@ -92,7 +92,6 @@
         }
 
 
-
         form div input {
             width: 100%;
             height: 42px;
@@ -104,14 +103,13 @@
 
         }
 
-
         .icon-eye {
             position: absolute;
             right: 13px;
             display: flex;
             top: 70%;
             transform: translateY(-50%);
-            
+
 
 
         }
@@ -131,7 +129,7 @@
             opacity: 70%;
         }
 
-       
+
         button {
             display: flex;
             justify-content: center;
@@ -155,7 +153,6 @@
         button:hover {
             background-color: rgb(92, 92, 92);
         }
-
 
 
         .footers {
@@ -200,38 +197,6 @@
         }
 
 
-        /* Container */
-        .social-login-circles {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(3, 0.6fr);
-            gap: 20px;
-
-        }
-
-        /* Boutons circulaires */
-        .social-login-circles button {
-
-            background-color: #ffffff;
-            border: 1px solid rgba(168, 168, 168, 0.637);
-            object-fit: cover;
-            transition: .3s ease;
-
-        }
-
-        .social-login-circles button:hover {
-            background-color: rgb(203, 203, 203);
-        }
-
-
-        /* Logos */
-        .social-login-circles button img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-
-        }
-
         .forgot a {
             color: rgb(20, 63, 204);
         }
@@ -244,7 +209,7 @@
 
 <body>
     <header class="navbar container">
-        <div class="navbar-brand">JSCARS</div>
+        <div id="navbarbrand" class="navbar-brand"><a href="/home.html"><img src="/img/logooo.png" alt="brand"> </a></div>
         <nav>
             <ul class="nav-links">
                 <li><a href="/home.html">Home</a></li>
@@ -259,27 +224,31 @@
     </header>
 
     <div class="containe">
-        <div class="header">
-            <h2>Créer un Compte</h2>
-            <p>Rejoignez <b>JSCAR</b> et commencez votre aventure/b></p>
+        <div class="header-">
+            <h2>Create an Account</h2>
+            <p>Join <b>JSCAR</b> and start your journey</p>
         </div>
+
         <form action="GET">
             <div class="fullname">
-                <label for="fullname">Nom Complet</label>
-                <input type="email" id="fullname" name="fullname" placeholder="Entrez votre Nom Complet">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
             </div>
+
             <div class="numero">
-                <label for="numero">Numéro de téléphone</label>
-                <input type="number" id="numero" name="numero" placeholder="Entrez votre Numéro de téléphone"
-                    pattern="[0-9]{10}">
+                <label for="numero">Phone Number</label>
+                <input type="tel" id="numero" name="numero" placeholder="Enter your phone number">
             </div>
+
             <div class="email">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Entrez votre e-mail">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
             </div>
+
             <div class="password">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+
                 <div id="icon-eyee" class="icon-eye">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -290,10 +259,11 @@
                     </svg>
                 </div>
             </div>
+
             <div class="password">
-                <label for="copassword">Confermer Mot de passe</label>
-                <input type="password" id="copassword" name="confirme_password"
-                    placeholder="confermez votre mot de passe">
+                <label for="copassword">Confirm Password</label>
+                <input type="password" id="copassword" name="confirm_password" placeholder="Confirm your password">
+
                 <div id="icon-eyee2" class="icon-eye">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -305,44 +275,16 @@
                 </div>
             </div>
 
-            <!-- <div class="checkbox">
-                <div class="remember">
-                    <label for="rememberme"></label>
-                    <input type="checkbox" id="rememberme"><span>Se souvenir de moi</span>
-
-
-                </div>
-                <div class="forgot">
-                    <a href="##" class="">Mot de passe oublié?</a>
-                </div>
-            </div> -->
-            <button type="submit">S’inscrire</button>
-
-
-            <!-- <div class="formou">
-                Ou continuez avec :
-            </div>
-
-
-            <div class="social-login-circles">
-                <button class="btn-google">
-                    <img src="search.png" alt="Google logo">
-
-                </button>
-
-                <button class="btn-facebook">
-                    <img src="facebook.png" alt="Facebook logo">
-                </button>
-
-                <button class="btn-apple">
-                    <img src="apple-logo.png" alt="Apple logo">
-                </button>
-            </div> -->
-            <div class="footers">
-                <p class="signup-link">Vous avez déjà un compte ?</p>
-                <a href="login.html" target="_parent">Connectez-vous</a>
-            </div>
+            <button type="submit">Sign up</button>
         </form>
+        <div class="footers">
+            <p class="signup-link">Already have an account?</p>
+            <a href="login.html" target="_parent">Log in</a>
+        </div>
+    </div>
+
+
+    </form>
     </div>
     <footer class="footer">
         <div class="container footer-grid">

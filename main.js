@@ -67,3 +67,7 @@ if (resetFiltersBtn) {
         if (applyFiltersBtn) applyFiltersBtn.click();
     });
 }
+
+
+
+

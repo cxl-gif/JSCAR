@@ -54,6 +54,12 @@ ul {
     letter-spacing: 1px;
 }
 
+.navbar-brand img {
+    width: 100px;
+    height: 45px;
+    object-fit: cover;
+}
+
 
 .nav-links {
     display: flex;
@@ -360,7 +366,7 @@ input[type="text"],
 
 /* Footer */
 .footer {
-    background: #f8f9fa;
+    background: #EFEFEF;
     padding: 60px 0 30px;
     border-top: 1px solid #e5e7eb;
 }
