@@ -5,7 +5,7 @@ const priceDisplay = document.getElementById('price-display');
 
 if (priceRange && priceDisplay) {
     priceRange.addEventListener('input', (e) => {
-        priceDisplay.textContent = `$${e.target.value}`;
+        priceDisplay.textContent = `$${e.target.value}`; //Récupère la valeur actuelle du curseur + le rand chaine
     });
 }
 
@@ -32,7 +32,6 @@ if (applyFiltersBtn) {
             const type = typeElem ? typeElem.textContent : '';
             const priceText = priceElem ? priceElem.textContent : '0';
 
-            // Extract price logic: "$120/day" -> 120
             const numericPrice = parseInt(priceText.replace(/[^0-9]/g, ''));
 
             let matchesSearch = searchTerm === '' || name.includes(searchTerm);
