@@ -81,11 +81,13 @@
 
     <section class="container fleet-container">
         <aside class="filters">
+
             <h3>Filters</h3>
             <div class="filter-group" style="margin-top: 20px;">
                 <label>Search</label>
                 <input id="filter-search" type="text" placeholder="Looking for...">
             </div>
+
             <div class="filter-group">
                 <label>Brand</label>
                 <select id="filter-brand">
@@ -97,6 +99,7 @@
                     <option value="Porsche">Porsche</option>
                 </select>
             </div>
+
             <div class="filter-group">
                 <label>Category</label>
                 <select id="filter-category">
@@ -116,6 +119,7 @@
                     <span>$50</span>
                     <span id="price-display">$500</span>
                 </div>
+
             </div>
             <button class="btn btn-primary btn-filter" id="apply-filters">Apply Filters</button>
             <button class="btn btn-outline btn-filter" id="reset-filters"
@@ -135,26 +139,27 @@
                     </div><br>
                     <div class="car-footer">
                         <div class="car-price">$120<span>/day</span></div>
-                        <a href="/viewcar/index.html" class="btn btn-primary"
-                            onclick="saveCar(
+                        <a href="/viewcar/index.html" class="btn btn-primary" onclick="saveCar(
                             'Mercedes-Benz C-Class',
-                            'img/Mercedes.jpg',
+                            '/img/Mercedes.jpg',
                             120,
                             'petrol',
                             5,
+
                             'Enjoy luxury and comfort with the Mercedes-Benz C-Class. A perfect sedan combining performance and elegance.',
-                            ['img/Mercedes-Benz C-Class 1.jpg','img/Mercedes-Benz C-Class 2.jpg'],
+                            ['/img/Mercedes1.jpg','/img/Mercedes2.jpg'],
                             'Automatic',
                             'Sedan'
                             )">
                             View Details
-                            </a>
+                        </a>
+
                     </div>
                 </div>
             </div>
 
             <div class="car-card">
-                <img src="img/audi.jpg" alt="Audi" class="car-img">
+                <img src="/img/audi.jpg" alt="Audi" class="car-img">
                 <div class="car-info">
                     <h3 class="car-name">audi rs7</h3>
                     <p class="car-type">Audi</p>
@@ -165,26 +170,25 @@
                     </div><br>
                     <div class="car-footer">
                         <div class="car-price">$130<span>/day</span></div>
-                        <a href="/viewcar/index.html" class="btn btn-primary"
-                            onclick="saveCar(
+                        <a href="/viewcar/index.html" class="btn btn-primary" onclick="saveCar(
                             'Audi RS7',
-                            'img/audi.jpg',
+                            '/img/audi.jpg',
                             130,
                             'petrol',
                             5,
                             'The Audi RS7 is a high-performance sports sedan with aggressive design and powerful engine.',
-                            ['img/audi rs7 1.jpg','img/audi rs7 2.jpg'],
+                            ['/img/audi1.jpg','/img/audi2.jpg'],
                             'Automatic',
                             'Sports Sedan'
                             )">
                             View Details
-                            </a>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="car-card">
-                <img src="img/porche.jpg" alt="Audi" class="car-img">
+                <img src="/img/porche.jpg" alt="Audi" class="car-img">
                 <div class="car-info">
                     <h3 class="car-name">Porsche 911 gt3</h3>
                     <p class="car-type">Porsche</p>
@@ -195,19 +199,18 @@
                     </div><br>
                     <div class="car-footer">
                         <div class="car-price">$200<span>/day</span></div>
-                        <a href="/viewcar/index.html" class="btn btn-primary"
-                        onclick="saveCar(
+                        <a href="/viewcar/index.html" class="btn btn-primary" onclick="saveCar(
                         'Porsche 911 GT3',
-                        'img/porche.jpg',
+                        '/img/porche.jpg',
                         200,
                         'petrol',
                         2,
                         'Experience extreme performance with the Porsche 911 GT3. Built for speed and precision.',
-                        ['img/Porsche 911 gt3.png','img/Porsche 911 gt3 2.png'],
+                        ['/img/Porsche1.png','/img/Porsche2.png'],
                         'Automatic',
                         'Sports Car'
                         )">
-                        View Details
+                            View Details
                         </a>
                     </div>
                 </div>
@@ -225,25 +228,23 @@
                     </div>
                     <div class="car-footer">
                         <div class="car-price">$180<span>/day</span></div>
-                        <a href="/viewcar/index.html" class="btn btn-primary"
-                        onclick="saveCar(
+                        <a href="/viewcar/index.html" class="btn btn-primary" onclick="saveCar(
                         'BMW X5',
-                        'img/mate-vanyek-amyO34qYZj4-unsplash.jpg',
+                        '/img/mate-vanyek-amyO34qYZj4-unsplash.jpg',
                         180,
                         'diesel',
                         5,
                         'The BMW X5 is a premium SUV offering comfort, power, and advanced driving features.',
-                        ['img/BMW X5 look5.jpg','img/BMW X5 look2.jpg'],
+                        ['/img/BMW1.jpg','/img/BMW2.jpg'],
                         'Automatic',
                         'SUV'
                         )">
-                        View Details
+
+                            View Details
                         </a>
                     </div>
                 </div>
             </div>
-
-
 
             <div class="car-card">
                 <img src="img/teslamodels.jpg" alt="Tesla" class="car-img">
@@ -257,26 +258,26 @@
                     </div>
                     <div class="car-footer">
                         <div class="car-price">$150<span>/day</span></div>
-                        <a href="/viewcar/index.html" class="btn btn-primary"
-                            onclick="saveCar(
+                        <a href="/viewcar/index.html" class="btn btn-primary" onclick="saveCar(
                             'Tesla Model S',
-                            'img/teslamodels.jpg',
+                            '/img/teslamodels.jpg',
                             150,
                             'electric',
                             5,
                             'Experience the future of driving with the Tesla Model S. This all-electric luxury sedan offers incredible performance, advanced autopilot features, and a sleek design.',
-                            ['img/thelook2.jpg','img/thelook.jpg'],
+                            ['/img/thelook2.jpg','/img/thelook.jpg'],
                             'Automatic',
                             'Electric'
                             )">
                             View Details
-                            </a>
+                        </a>
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
+    </section>
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
@@ -316,8 +317,32 @@
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js">
+
+    </script>
+
+    <script>
+        function saveCar(name, img, price, fuel, seats, description, images, transmission, category) {
+
+            let car = {
+                name: name,
+                img: img,
+                price: price,
+                fuel: fuel,
+                seats: seats,
+                description: description,
+                images: images,
+                transmission: transmission,
+                category: category
+            };
+
+            localStorage.setItem("selectedCar", JSON.stringify(car));
+
+        }
+    </script>
     <script src="viewcar/main.js"></script>
+
+
 </body>
 
 </html>

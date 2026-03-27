@@ -2,37 +2,35 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Payment</title>
     <link rel="stylesheet" href="/css/style.css">
 
     <style>
         :root {
-            --color: rgba(0, 0, 0, 0.25);
+            --chafaf: rgba(230, 230, 230, 0.678);
         }
 
         body {
             font-family: Arial, sans-serif;
         }
 
-        /* CONTAINER */
         .payment-container {
             max-width: 800px;
             margin: 60px auto;
             padding: 40px;
-            background-color: var(--color);
+            background-color: var(--chafaf);
             border-radius: 16px;
         }
 
-        /* TITLE */
         .payment-container h2 {
             text-align: center;
             font-size: 40px;
             margin-bottom: 30px;
         }
 
-        /* FORM */
         .payment-form {
             display: flex;
             flex-direction: column;
@@ -59,7 +57,6 @@
             outline: none;
         }
 
-        /* SUMMARY */
         .summary {
             background: white;
             padding: 20px;
@@ -72,7 +69,6 @@
             font-size: 18px;
         }
 
-        /* BUTTON */
         button {
             width: 50%;
             margin: 30px auto;
@@ -107,6 +103,7 @@
             <a href="/signup/index.html" class="btn btn-outline">Sign Up</a>
         </div>
     </header>
+
 
     <div class="payment-container">
         <h2>Payment</h2>
@@ -183,23 +180,27 @@
                     <li><a href="#">Facebook</a></li>
                 </ul>
             </div>
+
+
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 JSCARS. All rights reserved.</p>
         </div>
+
+
     </footer>
-
-
-
+    <script src="/viewcar/main.js"></script>
 
     <script>
+     
         const days = localStorage.getItem("days");
         const total = localStorage.getItem("total");
 
-        document.getElementById("days").textContent = " " + days;
-        document.getElementById("total").textContent = " " + total;
+        document.getElementById("days").textContent = days ;
+        document.getElementById("total").textContent = total;
 
     </script>
+
 </body>
 
 </html>

@@ -1,8 +1,8 @@
 
 const startInput = document.getElementById("start");
 const endInput = document.getElementById("end");
-const btn = ocument.querySelector("button");
-
+const btn = document.querySelector("button");
+const prix = document.getElementById('')
 btn.addEventListener("click", function () {
 
     const start = new Date(startInput.value);
@@ -19,26 +19,22 @@ btn.addEventListener("click", function () {
     window.location.href = "/payementpg/index.html";
 });
 
+let car = JSON.parse(localStorage.getItem("selectedCar"));
 
-const name = localStorage.getItem("carName");
-const img = localStorage.getItem("carImg");
-const price = localStorage.getItem("carPrice");
-const fuel = localStorage.getItem("carFuel");
-const seats = localStorage.getItem("carSeats");
-const desc = localStorage.getItem("carDesc");
-const transmission = localStorage.getItem("cartrans");
-const category = localStorage.getItem("carcategory");
+if (car) {
+    document.getElementById("car-name").innerHTML = car.name;
+    document.getElementById("car-sub").innerHTML = car.category;
+    document.getElementById("car-price").innerHTML = "$" + car.price;
 
+    document.getElementById("car-transmission").innerHTML = car.transmission;
+    document.getElementById("car-fuel").innerHTML = car.fuel;
+    document.getElementById("car-seats").innerHTML = car.seats;
+    document.getElementById("car-category").innerHTML = car.category;
 
-document.getElementById("car-transmission").textContent = transmission;
-document.getElementById("car-category").textContent = category;
+    document.getElementById("car-description").innerHTML = car.description;
 
-document.getElementById("car-name").textContent = name;
-document.getElementById("car-sub").textContent = name + " 2024";
-document.getElementById("car-price").textContent = "$" + price;
+    document.getElementById("main-car").src = car.img;
+    document.getElementById("car-look1").src = car.images[0];
+    document.getElementById("car-look2").src = window.location.origin + car.images[1];
 
-document.getElementById("main-car").src = img;
-
-document.getElementById("car-fuel").textContent = fuel;
-document.getElementById("car-seats").textContent = seats;
-document.getElementById("car-description").textContent = desc;
+}
