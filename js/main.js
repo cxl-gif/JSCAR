@@ -70,3 +70,16 @@ if (resetFiltersBtn) {
 
 
 
+function saveCar(name, img, price, fuel, seats, desc, images,transmision,category) {
+    localStorage.setItem("carName", name);
+    localStorage.setItem("carImg", img);
+    localStorage.setItem("carPrice", price);
+    localStorage.setItem("carFuel", fuel);
+    localStorage.setItem("carSeats", seats);
+    localStorage.setItem("carDesc", desc);
+    localStorage.setItem("carImages", JSON.stringify(images));
+    localStorage.setItem("cartrans", transmision);
+    localStorage.setItem("carcategory", category);
+
+}
+

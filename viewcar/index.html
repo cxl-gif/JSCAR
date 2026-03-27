@@ -185,12 +185,13 @@
 <body>
 
     <header class="navbar container">
-        <div id="navbarbrand" class="navbar-brand"><a href="/home.html"><img src="/img/logooo.png" alt="brand"></a></div>
+        <div id="navbarbrand" class="navbar-brand"><a href="/index.html"><img src="/img/logooo.png" alt="brand"></a>
+        </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="/home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="/fleet.html">Fleet</a></li>
-                <li><a href="/viewcar/index.html">Contact Us</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
             </ul>
         </nav>
         <div class="nav-actions">
@@ -201,63 +202,61 @@
     <div class="content-book">
         <div class="book-head">
             <div class="img-look">
-                <img src="/img/teslamodels.jpg" alt="">
+                <img id="main-car" src="" alt="">
             </div>
+
 
             <div class="book-caractere">
-                <h2>tesla model s</h2>
-                <p class="name-car">tesla model s 2024</p>
-                <p class="book-prix-day"><b class="book-prix">$150/</b>day</p>
-                <div class="caractere">
-
-                    <p class="">⚙️ Transmission <b>Automatic</b></p>
-                    <p class=""> ⛽️ FUEL <b>electric</b> </p>
-
-                    <p class="">👥️ SEAT <b>5</b> </p>
-                    <p>🚗️ Category <b>luxury</b> </p>
+                <h2 id="car-name"></h2>
+                <p class="name-car" id="car-sub"></p>
+                <p class="book-prix-day"><b class="book-prix" id="car-price"></b>/day</p>
 
 
-                </div>
-                <div class="description-feet">
-                    <h4>description</h4>
-                    <p>Experience the future of driving with the Tesla Model S. This all-electric luxury sedan offers
-                        incredible performance, advanced autopilot features, and a sleek, modern design.</p>
-                </div>
+                <p>⚙️ Transmission <b id="car-transmission"></b></p>
+                <p>⛽️ FUEL <b id="car-fuel"></b></p>
+                <p>👥️ SEAT <b id="car-seats"></b></p>
+                <p>🚗️ Category <b id="car-category"></b> </p>
+
+            </div>
+            <div class="description-feet">
+                <h4>description</h4>
+                <p id="car-description"></p>
             </div>
         </div>
-        <div class="feet-book">
-            <div class="side-image">
-                <img src="/img/thelook2.jpg" alt="">
-                <img src="/img/thelook.jpg" alt="">
-            </div>
-            <div class="car-book">
-                <h3>book this car</h3>
-                <div class="book-inputs">
-                    <div class="start">
-                        <div>
-                            <label for="start">Start Date</label>
-                            <input type="date" name="" id="start">
-                        </div>
-                        <div>
-                            <label for="pickup">Pickup Location</label>
-                            <input type="text" name="" id="pickup" placeholder="Enter pickup location">
-                        </div>
-                    </div>
-                    <div class="end">
-                        <div>
-                            <label for="end">End Date</label>
-                            <input type="date" name="" id="end" placeholder="">
-                        </div>
-                        <div>
-                            <label for="drop">Drop-off Location</label>
-                            <input type="text" name="" id="drop" placeholder="drop-off location">
-                        </div>
-                    </div>
-
-                </div>
-                <button id="bookbtn"> <a href="/payementpg/index.html">book now</a></button>
-            </div>
+    </div>
+    <div class="feet-book">
+        <div class="side-image">
+            <img id="car-look1" src="" alt="">
+            <img id="car-look2" src="" alt="">
         </div>
+        <div class="car-book">
+            <h3>book this car</h3>
+            <div class="book-inputs">
+                <div class="start">
+                    <div>
+                        <label for="start">Start Date</label>
+                        <input type="date" name="" id="start">
+                    </div>
+                    <div>
+                        <label for="pickup">Pickup Location</label>
+                        <input type="text" name="" id="pickup" placeholder="Enter pickup location">
+                    </div>
+                </div>
+                <div class="end">
+                    <div>
+                        <label for="end">End Date</label>
+                        <input type="date" name="" id="end" placeholder="">
+                    </div>
+                    <div>
+                        <label for="drop">Drop-off Location</label>
+                        <input type="text" name="" id="drop" placeholder="drop-off location">
+                    </div>
+                </div>
+
+            </div>
+            <button id="bookbtn"> <a href="/payementpg/index.html">book now</a></button>
+        </div>
+    </div>
     </div>
 
     <footer class=" footer">
@@ -273,8 +272,8 @@
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="fleet.html">Our Fleet</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/contact.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -299,9 +298,9 @@
         </div>
     </footer>
 
-    <script src="main.js">
-        
-    </script>
+    <script src="main.js"></script>
+    <script src="/js/main.js"></script>
+
 </body>
 
 </html>
