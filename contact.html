@@ -116,6 +116,33 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
+
+        .hero-contact{
+            animation:hero 1s ease-out ;
+
+        }
+        .hero-title{
+            animation:hero 0.8 ease-out ;
+
+        }
+        .hero-subtitle{
+            animation:hero 0.9s ease-out ;
+
+        }
+        @keyframes hero{
+            from{
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+        }
+        
+
+
         @media (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;

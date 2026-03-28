@@ -12,6 +12,7 @@
         :root {
             --color: #f5f5f5;
             --chafaf: rgb(223, 223, 223);
+            --baji: #EFEFEF;
 
         }
 
@@ -48,9 +49,21 @@
             padding: 40px;
             margin: 0px auto 60px;
             min-width: 200px;
-            background-color: var(--chafaf);
+            background-color: var(--baji);
             border-radius: 8px;
-            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+            animation: frame 0.8s ease-out;
+        }
+
+        @keyframes frame {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         .header {
@@ -96,7 +109,6 @@
             padding-inline: 14px;
             border: 1px solid rgb(233, 232, 232);
             border-radius: 6px;
-            outline: none;
             box-sizing: border-box;
 
         }

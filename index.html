@@ -63,6 +63,43 @@
             right: 0;
             bottom: 0;
         }
+        .hold:hover {
+            text-decoration: underline;
+        }
+
+        .hero-content {
+            animation: heroFade 1s ease-out;
+        }
+
+        
+
+        .hero-title {
+            animation: heroFade 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            animation: heroFade 1s ease-out;
+        }
+
+        .search-bar {
+            animation: heroFade 1.2s ease-out;
+        }
+
+        .hero-propriete {
+            animation: heroFade 1.4s ease-out;
+        }
+
+        @keyframes heroFade {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -72,9 +109,9 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/fleet.html">Fleet</a></li>
-                <li><a class="nav-contact" href="/contact.html">Contact Us</a></li>
+                <li><a class="hold" href="/index.html">Home</a></li>
+                <li><a class="hold" href="/fleet.html">Fleet</a></li>
+                <li><a class="hold" class="nav-contact" href="/contact.html">Contact Us</a></li>
             </ul>
         </nav>
         <div class="nav-actions">
@@ -101,7 +138,7 @@
                         <option value="luxury">Luxury</option>
                     </select>
                 </div>
-                <button id="btn_search" class="btn btn-search">Search</button>
+                <button id="btn_search" class="btn btn-search"><a href="fleet.html">Search</a></button>
             </div>
             <script>
                 const btn_search = document.getElementById(btn_search);
