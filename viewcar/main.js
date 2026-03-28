@@ -5,10 +5,12 @@ const btn = document.querySelector("button");
 // const prix = document.getElementById('')
 btn.addEventListener("click", function () {
 
-// kat7awwel text dyal date l date 7aqiqi li n9dro nkhdmo 3liha
-// const year = myDate.getFullYear();
+    // kat7awwel text dyal date l date 7aqiqi li n9dro nkhdmo 3liha
+    // const year = myDate.getFullYear();
+
 
     const end = new Date(endInput.value);
+    const start = new Date(startInput.value);
 
     const diffTime = end - start;
     const days = diffTime / (1000 * 60 * 60 * 24);

@@ -66,7 +66,23 @@ if (resetFiltersBtn) {
         if (applyFiltersBtn) applyFiltersBtn.click();
     });
 }
+function saveCar(name, img, price, fuel, seats, description, images, transmission, category) {
 
+    let car = {
+        name: name,
+        img: img,
+        price: price,
+        fuel: fuel,
+        seats: seats,
+        description: description,
+        images: images,
+        transmission: transmission,
+        category: category
+    };
+
+    localStorage.setItem("selectedCar", JSON.stringify(car));
+
+}
 
 
 

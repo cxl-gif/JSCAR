@@ -141,7 +141,6 @@
                 <p>Days: <span id="days">0</span></p>
                 <p>Total: $<span id="total">0</span></p>
             </div>
-
             <button type="button" id="payBtn">Pay Now</button>
 
         </form>
@@ -189,18 +188,18 @@
 
 
     </footer>
-    <script src="/viewcar/main.js"></script>
-    
 
     <script>
-     
+
         const days = localStorage.getItem("days");
         const total = localStorage.getItem("total");
 
-        document.getElementById("days").textContent =days ;
+        document.getElementById("days").textContent = days;
         document.getElementById("total").textContent = total;
 
     </script>
+    <script src="/js/main.js"></script>
+
 
 </body>
 
