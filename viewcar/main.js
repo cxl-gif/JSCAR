@@ -2,10 +2,12 @@
 const startInput = document.getElementById("start");
 const endInput = document.getElementById("end");
 const btn = document.querySelector("button");
-const prix = document.getElementById('')
+// const prix = document.getElementById('')
 btn.addEventListener("click", function () {
 
-    const start = new Date(startInput.value);
+// kat7awwel text dyal date l date 7aqiqi li n9dro nkhdmo 3liha
+// const year = myDate.getFullYear();
+
     const end = new Date(endInput.value);
 
     const diffTime = end - start;
@@ -35,6 +37,6 @@ if (car) {
 
     document.getElementById("main-car").src = car.img;
     document.getElementById("car-look1").src = car.images[0];
-    document.getElementById("car-look2").src = window.location.origin + car.images[1];
+    document.getElementById("car-look2").src = car.images[1];
 
 }
