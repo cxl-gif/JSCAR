@@ -65,6 +65,10 @@ const passwordnotcoorect=document.getElementById('password-not-correct')
 
 buttonsignup.addEventListener('click', function () {
 
+    passwordnotcoorect.innerHTML = ` <p class="try-again"></p>`;
+        coppassword.style.borderColor = 'black';
+        motcle.style.color = 'black';
+
     if (
         fullname.value !== '' &&
         numero.value !== '' &&

@@ -3,25 +3,34 @@ const passwordlogin = document.getElementById('password-login');
 const buttonlogin = document.getElementById('btn-login');
 const eye = document.getElementById('icon-eyee');
 const passwordnotcoorect = document.getElementById('password-not-correct');
-const motcle=document.getElementById('mot-cle');
+const motcle = document.getElementById('mot-cle');
 
-const emailsignup= localStorage.getItem('email');
-const passawordsignup=localStorage.getItem('password')
+const emailsignup = localStorage.getItem('email');
+const passawordsignup = localStorage.getItem('password')
 
 buttonlogin.addEventListener('click', function () {
 
-   
+    passwordnotcoorect.innerHTML = ` <p class="try-again"></p>`;
+    passwordlogin.style.borderColor = 'black';
+    motcle.style.color = 'black';
+
     if (
+
         emaillogin.value === emailsignup && passwordlogin.value === passawordsignup) {
+        passwordnotcoorect.innerHTML = ` <p class="try-again"></p>`;
+        passwordlogin.style.borderColor = 'black';
+        motcle.style.color = 'black';
         alert('Login success ');
         emaillogin.value = '';
         passwordlogin = '';
     } else {
 
         passwordnotcoorect.innerHTML = ` <p class="try-again">Password is not correct try again</p>`
-        passwordlogin.style.borderColor ='red';
-        motcle.style.color='red';
+        passwordlogin.style.borderColor = 'red';
+        motcle.style.color = 'red';
     }
+
+
 });
 
 
