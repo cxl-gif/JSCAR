@@ -16,7 +16,7 @@ if (applyFiltersBtn) {
         const categorySelect = document.getElementById('filter-category');
         const priceInput = document.getElementById('filter-price');
 
-        const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+        const searchTerm = searchInput ? searchInput.value.toLowerCase().replace(/\s/g, '') : '';
         const brandFilter = brandSelect ? brandSelect.value : 'all';
         const categoryFilter = categorySelect ? categorySelect.value : 'all';
         const maxPrice = priceInput ? parseInt(priceInput.value) : Infinity;
@@ -83,6 +83,41 @@ function saveCar(name, img, price, fuel, seats, description, images, transmissio
     localStorage.setItem("selectedCar", JSON.stringify(car));
 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.pathname.includes('fleet.html')) {
+        const homeSearch = localStorage.getItem('homeSearch');
+        const homeCategory = localStorage.getItem('homeCategory');
+        let shouldApplyFilters = false;
+
+        if (homeSearch) {
+            const searchInput = document.getElementById('filter-search');
+            if (searchInput) searchInput.value = homeSearch;
+            shouldApplyFilters = true;
+        }
+
+        if (homeCategory && homeCategory !== 'all') {
+            const categorySelect = document.getElementById('filter-category');
+            if (categorySelect) {
+                Array.from(categorySelect.options).forEach(opt => {
+                    if (opt.value.toLowerCase() === homeCategory.toLowerCase()) {
+                        categorySelect.value = opt.value;
+                    }
+                });
+            }
+            shouldApplyFilters = true;
+        }
+
+        if (shouldApplyFilters) {
+            const applyBtn = document.getElementById('apply-filters');
+            if (applyBtn) {
+                setTimeout(() => applyBtn.click(), 50);
+            }
+            localStorage.removeItem('homeSearch');
+            localStorage.removeItem('homeCategory');
+        }
+    }
+});
 
 
 
