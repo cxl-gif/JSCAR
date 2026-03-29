@@ -23,7 +23,10 @@ btn.addEventListener("click", function () {
     window.location.href = "/payementpg/index.html";
 });
 
-// let car = JSON.parse(localStorage.getItem("selectedCar"));
+const maincar = document.getElementById("main-car");
+const carlook1 = document.getElementById("car-look1");
+const carlook2 = document.getElementById("car-look2");
+
 
 if (car) {
     document.getElementById("car-name").innerHTML = car.name;
@@ -37,7 +40,26 @@ if (car) {
 
     document.getElementById("car-description").innerHTML = car.description;
 
-    document.getElementById("main-car").src = car.img;
-    document.getElementById("car-look1").src = car.images[0];
-    document.getElementById("car-look2").src = car.images[1];
+    maincar.src = car.img;
+    carlook1.src = car.images[0];
+    carlook2.src = car.images[1];
+
+    carlook1.addEventListener('mouseover', function () {
+        maincar.src = car.images[0];
+    });
+
+    carlook2.addEventListener('mouseover', function () {
+        maincar.src = car.images[1];
+    });
+
+    carlook1.addEventListener('mouseout', function () {
+        maincar.src = car.img;
+    });
+
+    carlook2.addEventListener('mouseout', function () {
+        maincar.src = car.img;
+    });
+
+
+
 }

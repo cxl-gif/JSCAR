@@ -220,6 +220,11 @@
         .forgot a:hover {
             text-decoration: none;
         }
+
+        .try-again {
+            color: red;
+            margin-left: 2px;
+        }
     </style>
 </head>
 
@@ -246,25 +251,25 @@
             <p>Join <b>JSCAR</b> and start your journey</p>
         </div>
 
-        <form action="GET">
+        <form action="">
             <div class="fullname">
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
             </div>
 
             <div class="numero">
                 <label for="numero">Phone Number</label>
-                <input type="tel" id="numero" name="numero" placeholder="Enter your phone number">
+                <input type="tel" id="numero" name="numero" required placeholder="Enter your phone number">
             </div>
 
             <div class="email">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <label for="email-signup">Email</label>
+                <input type="email" id="email-signup" name="email" required placeholder="Enter your email">
             </div>
 
             <div class="password">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <label for="password-signup">Password</label>
+                <input type="password" id="password-signup" name="password" required placeholder="Enter your password">
 
                 <div id="icon-eyee" class="icon-eye">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -278,8 +283,9 @@
             </div>
 
             <div class="password">
-                <label for="copassword">Confirm Password</label>
-                <input type="password" id="copassword" name="confirm_password" placeholder="Confirm your password">
+                <label for="copassword-signup" id="mot-cle">Confirm Password</label>
+                <input type="password" id="copassword-signup" required name="confirm_password"
+                    placeholder="Confirm your password">
 
                 <div id="icon-eyee2" class="icon-eye">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -291,8 +297,11 @@
                     </svg>
                 </div>
             </div>
+            <div id="password-not-correct">
+            </div>
 
-            <button type="submit">Sign up</button>
+            <button id="btn-signup" type="button">Sign up</button>
+
         </form>
         <div class="footers">
             <p class="signup-link">Already have an account?</p>
@@ -340,7 +349,10 @@
             <p>&copy; 2026 JSCARS. All rights reserved.</p>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="main.js">
+
+
+    </script>
 
 
 </body>
