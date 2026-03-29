@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 
     <style>
         :root {
             --color: #f5f5f5;
-            --chafaf: rgb(223, 223, 223);
             --baji: #EFEFEF;
-
+            --chafaf: rgb(223, 223, 223);
         }
 
         * {
@@ -24,19 +23,7 @@
 
         }
 
-        /* body {
 
-            background: linear-gradient(135deg, #858fa3, #454c57, #46484d);
-            background-attachment: fixed;
-
-            background-color: var(--color);
-            background-image: url("");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            object-fit: cover;
-
-        } */
 
         .containe {
             display: flex;
@@ -45,13 +32,15 @@
             justify-content: center;
             gap: 20px;
             max-width: 450px;
-            height: 100vh;
+            height: auto;
             padding: 40px;
             margin: 0px auto 60px;
             min-width: 200px;
             background-color: var(--baji);
             border-radius: 8px;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
             animation: frame 0.8s ease-out;
+
         }
 
         @keyframes frame {
@@ -66,9 +55,10 @@
             }
         }
 
-        .header {
-            /* position: relative; */
-            /* z-index: 1; */
+
+        .header- {
+            /* position: relative;
+            z-index: 1; */
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -76,19 +66,24 @@
 
         }
 
-        .header h2 {
+        .header- h2 {
             font-size: 40px;
         }
 
-        .header p {
-
+        .header- p {
             opacity: 50%;
             font-size: 14px;
             margin-top: 10px;
 
         }
 
+        #password,
+        #copassword {
+            padding-right: 38px;
+        }
+
         form {
+            /* font-weight:bold; */
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -103,53 +98,36 @@
             gap: 10px;
         }
 
+
         form div input {
             width: 100%;
             height: 42px;
             padding-inline: 14px;
             border: 1px solid rgb(233, 232, 232);
-            border-radius: 6px;
+            border-radius: 10px;
+            outline: none;
             box-sizing: border-box;
-
-
-        }
-
-        .checkbox {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 25px;
-
-        }
-
-        .remember {
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            gap: 5px;
-            /* margin-left: -4px; */
-            /* padding-left: -1000px; */
-
-        }
-
-        .remember input {
-            width: 15px;
-            height: 15px;
 
         }
 
         .icon-eye {
             position: absolute;
             right: 13px;
+            display: flex;
             top: 70%;
             transform: translateY(-50%);
+
+
 
         }
 
         .icon-eye svg {
+            padding-left: 2px;
             width: 20px;
             height: 20px;
             cursor: pointer;
+
+
 
         }
 
@@ -158,9 +136,6 @@
             opacity: 70%;
         }
 
-        #password {
-            padding-right: 38px;
-        }
 
         button {
             display: flex;
@@ -187,7 +162,6 @@
         }
 
 
-
         .footers {
             margin-top: 10px;
             display: flex;
@@ -195,6 +169,7 @@
             align-items: center;
             flex-direction: row;
             gap: 4px;
+            margin-bottom: 15px;
         }
 
         .footers p {
@@ -228,13 +203,13 @@
 
 <body>
     <header class="navbar container">
-        <div id="navbarbrand" class="navbar-brand"><a href="/index.html"><img src="../img/logooo.png" alt="brand"> </a>
+        <div id="navbarbrand" class="navbar-brand"><a href="index.html"><img src="../img/logooo.png" alt="brand"> </a>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/fleet.html">Fleet</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
         <div class="nav-actions">
@@ -244,20 +219,31 @@
     </header>
 
     <div class="containe">
-        <div class="header">
-            <h2>Welcome!</h2>
-            <p>Log in to access <b>JSCAR</b></p>
+        <div class="header-">
+            <h2>Create an Account</h2>
+            <p>Join <b>JSCAR</b> and start your journey</p>
         </div>
 
         <form action="">
+            <div class="fullname">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+            </div>
+
+            <div class="numero">
+                <label for="numero">Phone Number</label>
+                <input type="tel" id="numero" name="numero" required placeholder="Enter your phone number">
+            </div>
+
             <div class="email">
-                <label for="email">Email</label>
-                <input type="email" id="email-login" name="email" placeholder="Enter your email" required>
+                <label for="email-signup">Email</label>
+                <input type="email" id="email-signup" name="email" required placeholder="Enter your email">
             </div>
 
             <div class="password">
-                <label for="password" id="mot-cle">Password</label>
-                <input type="password" id="password-login" name="password" placeholder="Enter your password" required>
+                <label for="password-signup">Password</label>
+                <input type="password" id="password-signup" name="password" required placeholder="Enter your password">
+
                 <div id="icon-eyee" class="icon-eye">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -269,28 +255,36 @@
                 </div>
             </div>
 
+            <div class="password">
+                <label for="copassword-signup" id="mot-cle">Confirm Password</label>
+                <input type="password" id="copassword-signup" required name="confirm_password"
+                    placeholder="Confirm your password">
+
+                <div id="icon-eyee2" class="icon-eye">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-eye-icon lucide-eye">
+                        <path
+                            d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                </div>
+            </div>
             <div id="password-not-correct">
             </div>
-            <div class="checkbox">
-                <div class="remember">
-                    <input type="checkbox" id="rememberme">
-                    <span>Remember me</span>
-                </div>
 
-                <div class="forgot">
-                    <a href="#">Forgot password?</a>
-                </div>
-            </div>
+            <button id="btn-signup" type="button">Sign up</button>
 
-            <button id="btn-login" type="button">Sign in</button>
-
-            <div class="footers">
-                <p class="signup-link">Don’t have an account?</p>
-                <a href="signup.html" target="_parent">Sign up</a>
-            </div>
         </form>
+        <div class="footers">
+            <p class="signup-link">Already have an account?</p>
+            <a href="login.html" target="_parent">Log in</a>
+        </div>
     </div>
 
+
+    </form>
+    </div>
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
@@ -328,9 +322,12 @@
             <p>&copy; 2026 JSCARS. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../js/signup.js">
 
 
-    <script src="/js/login.js"></script>
+    </script>
+
+
 </body>
 
 </html>
