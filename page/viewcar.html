@@ -15,33 +15,36 @@
         }
 
         .continner {
-            margin: 40px 30px;
-
+            margin: 40px 15px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 15px;
         }
 
 
         .content-book .book-head {
             display: flex;
             gap: 55px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .book-head img {
-            width: 600px;
-            height: 500px;
-            border-radius: 10px 10px 0 0;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            max-height: 500px;
+            border-radius: 10px;
             object-fit: cover;
 
         }
 
-
         .book-head .book-caractere {
-            width: 600px;
-            height: 450px;
+            width: 100%;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
             gap: 30px;
-
-
         }
 
         .book-caractere h2 {
@@ -74,10 +77,9 @@
             padding: 30px;
             background-color: var(--color);
             display: grid;
-            grid: 100px;
             border-radius: 16px;
-            grid-template-columns: repeat(2, 300px);
-            row-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
         .book-caractere .description-feet {
@@ -96,21 +98,25 @@
 
         .feet-book {
             display: flex;
-            gap: 200px;
-
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
         }
 
         .feet-book .side-image {
             margin-top: 30px;
             display: flex;
             gap: 22px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .feet-book .side-image img {
             width: 160px;
             height: 120px;
             border-radius: 16px;
-
+            object-fit: cover;
         }
 
         .car-book {
@@ -119,38 +125,38 @@
             border-radius: 16px;
             display: flex;
             flex-direction: column;
-            margin-top: 65px;
-            margin-left: 60px;
-
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
         }
 
         .car-book .book-inputs {
             display: flex;
             flex-direction: column;
-            gap: 50px;
-            margin-left: 8px;
+            gap: 30px;
         }
 
         .car-book .book-inputs .start,
         .car-book .book-inputs .end {
             display: flex;
-            flex-direction: rom;
-            gap: 50px;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .car-book .book-inputs .start div,
         .car-book .book-inputs .end div {
             display: flex;
             flex-direction: column;
+            flex: 1;
         }
 
         .car-book .book-inputs input {
             margin-top: 10px;
-            margin-left: 7px;
             border: none;
             outline: none;
             border-radius: 10px;
-            width: 250px;
+            width: 100%;
             height: 45px;
             padding-left: 8px;
             padding-right: 8px;
@@ -159,7 +165,7 @@
         .car-book h3 {
             text-transform: capitalize;
             margin-bottom: 20px;
-            font-size: 40px;
+            font-size: 32px;
 
         }
 
@@ -171,8 +177,8 @@
             justify-content: center;
             align-items: center;
             margin-top: 50px;
-            width: 50%;
-            margin: 50px auto 20px;
+            width: 100%;
+            margin: 30px auto 0;
             height: 50px;
             border: none;
             outline: none;
@@ -182,6 +188,19 @@
         button:hover {
             background-color: rgba(0, 0, 0, 0.86);
 
+        }
+
+        @media (max-width: 768px) {
+            .book-head img {
+                border-radius: 10px;
+            }
+            .book-caractere h2 {
+                font-size: 32px;
+            }
+            .car-book {
+                padding: 20px;
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
