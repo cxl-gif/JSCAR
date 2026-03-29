@@ -23,7 +23,7 @@ ul {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -476,6 +476,7 @@ input[type="text"],
     .car-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .search-bar {
         width: 100%;
         max-width: 100%;
@@ -505,7 +506,7 @@ input[type="text"],
         border-bottom: 1px solid #ddd;
         padding: 5px 0;
     }
-    
+
     .select-wrapper {
         width: 100%;
         padding: 5px 0;
@@ -521,7 +522,7 @@ input[type="text"],
         align-items: center;
         gap: 20px;
     }
-    
+
     .hero-propriete div {
         margin: 10px 0;
     }
